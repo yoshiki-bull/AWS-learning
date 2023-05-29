@@ -7,7 +7,7 @@
 1. EC2にログイン(成功)
 2. `sudo dnf update -y`
 3. `sudo dnf install mariadb105`
-4. mysql -h <my-endpoint> -P 3306 -u yoshiki -p
+4. `mysql -h <my-endpoint> -P 3306 -u yoshiki -p`
 5. パスワードを入力
 6. アクセスできない(↓結果)
 ```
