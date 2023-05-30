@@ -49,8 +49,8 @@
 - インフラ領域は想像以上に奥が深い
 - EC2は起動のたびにパブリックDNS名が変わる
 - SSHキーを`~/.ssh/`に移動させた場合の相対パス  
-`ssh -i "/home/username/.ssh/half.pem"`  
-`ssh -i "~/.ssh/half.pem `
+`ssh -i "/home/username/.ssh/example.pem"`  
+`ssh -i "~/.ssh/example.pem `
 - Windowsのファイルシステム配下にあるディレクトリ上だとパーミッションを変更できない  
 **つまり`chmod 400 example.pem`(読取のみ許可)がきかない**
 
