@@ -52,7 +52,7 @@
 `ssh -i "/home/username/.ssh/half.pem"`  
 `ssh -i "~/.ssh/half.pem `
 - Windowsのファイルシステム配下にあるディレクトリ上だとパーミッションを変更できない  
-**つまり、`chmod 400 example.pem`(読取のみ許可)がきかない**
+**つまり`chmod 400 example.pem`(読取のみ許可)がきかない**
 
 ## 参考
 - [MySQL DB インスタンスの作成と接続(公式)](https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.MySQL.html)
