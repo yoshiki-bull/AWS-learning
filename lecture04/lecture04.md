@@ -51,8 +51,9 @@
 - SSHキーを`~/.ssh/`に移動させた場合の相対パス  
 `ssh -i "/home/username/.ssh/example.pem"`  
 `ssh -i "~/.ssh/example.pem `
-- Windowsのファイルシステム配下にあるディレクトリ上だとパーミッションを変更できない  
-**つまり`chmod 400 example.pem`(読取のみ許可)がきかない**
+- LinuxからWindowsのファイルシステム配下にあるファイルのパーミッションは変更できない  
+**つまり`chmod 400 example.pem`(読取のみ許可)がきかない**  
+なのでLinux上で作業することにした
 
 ## 参考
 - [MySQL DB インスタンスの作成と接続(公式)](https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.MySQL.html)
