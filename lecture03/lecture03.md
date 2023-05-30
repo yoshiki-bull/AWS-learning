@@ -10,7 +10,7 @@
 ![V-Model](images/V-Model.png)
 
 - **W字モデル**---V字モデルにおける従来の問題点を解決する方法として発達したモデル
-- 
+
 ![W-Model](images/W-Model.png)
 
 ## システム(アプリケーション)開発手法
