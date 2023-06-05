@@ -2,11 +2,11 @@
 
 ## 各セキュリティグループ
 ### EC2用
-- SSH(port:22)を許可
-- Source: マイIPを指定(このデバイスのIPアドレス)
+- SSH(port:22)を許可  
+  - Source: マイIPを指定(このデバイスのIPアドレス)
 - HTTP(port:80)を許可
 - HTTPS(port:443)を許可
-- Source: 全てのIPアドレス(0.0.0.0/0)を許可
+  - Source: 全てのIPアドレス(0.0.0.0/0)を許可
 
 ![EC2セキュリティグループ](images/ec2-sg.png)
 
