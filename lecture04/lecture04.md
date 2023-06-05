@@ -103,9 +103,9 @@ yumではパッケージが改ざんされているか検証するためにGPG�
 
 ## 学び
 - インフラ領域は想像以上に奥が深い  
-- SSHキーを`~/.ssh/`に移動させた場合の相対パス  
+- SSHキーを`~/.ssh/`に移動させた場合の絶対パスと相対パス  
 `ssh -i "/home/username/.ssh/example.pem"`  
-`ssh -i "~/.ssh/example.pem `
+`ssh -i "~/.ssh/example.pem"`  
 - LinuxからWindowsのファイルシステム配下にあるファイルのパーミッションは変更できない  
 **つまり`chmod 400 example.pem`(読取のみ許可)がきかない**  
 なのでLinux上で作業することにした
