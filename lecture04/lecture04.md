@@ -84,7 +84,7 @@ VPC内のプライベートなネットワークとパブリックなインタ�
 `sudo yum install mysql-community-server` 
 7. バージョン確認  
 `mysql --version`    
-8. MySQLにログイン
+8. MySQLにログイン  
 `mysql -h <RDSのエンドポイント> -P <ポート番号> -u <マスターユーザー名> -p
 `
 
