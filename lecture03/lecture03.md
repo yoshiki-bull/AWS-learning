@@ -1,8 +1,44 @@
 # AWS第3回まとめ
 ## Web アプリケーションとは  
 ブラウザ上で利用できるアプリケーション
+
 ## Web アプリケーションでよく使う(見かける)言葉  
 「クライアントとサーバ」「リクエストとレスポンス」「通信」「HTTPメソッド」「HTML/CSS/JS」
+
+## 通信
+クライアント-サーバ間のリクエストとレスポンスのやり取りのこと  
+
+- 通信フォーマット 
+=>「どういった内容」を「どのような形」で「どのようにして送るか」を決めるためのもの 
+  - JSON  
+  - XML  
+
+同じ情報(キーと値の組み合わせ)を表現
+```
+// JSON形式
+{
+ "Name": "Tekkun",
+ "homeTown": "secret",
+ "Age": "secret",
+ "active": true
+}
+
+```
+
+```
+<!-- XML形式 -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+<Name>Tekkun</Name>
+<homeTown>secret</homeTown>
+<Age>secret</Age>
+<active>true</active>
+</root>
+```
+
+## HTTPメソッド
+リクエストを送る際に「行いたい処理」を伝えるための情報
+
 ## システム(アプリケーション)開発の流れ  
 **Web 系・業務系、両者の開発の流れに大きな違いはない**  
 - **V字モデル**---最も基本的なプロセスモデル  
@@ -84,6 +120,12 @@ DBサーバから結果が返ってきたらWebサーバ処理結果を伝える
 - **RDBMS(relational database management system)**  
 RDBを管理する為のシステム。
 (Oracle DataBase, MySQL, SQL Server, DB2, PostgreSQL, H2Databaseなど)
+
+## その他 Ruby用語など
+- Rails（フレームワーク）
+- Gem（ライブラリ）
+- Bundler（構成管理ツール）
+
 ## Rails による Web アプリケーションの起動(Cloud9)
 ### Railsの環境構築  
 1. Rubyをインストール  
@@ -97,16 +139,29 @@ RDBを管理する為のシステム。
 プロジェクトの依存関係を解決し必要なパッケージをインストールする  
 5. Railsをインストール  
 `gem install rails <version>`
+
 ### 設定の修正  
 1. サンプルのDB設定ファイルを元に実際の設定ファイルを作成  
 `cp config/database.tml.sample config/database.yml`
 2. database.ymlを修正  
 `password: 任意のパスワード`  
-`socket: /var/lib/mysql/mysql.sock`(developmentおよびtest)  
-3. ~/Procfile.devファイルを修正  
-`web: bin/rails server -p 8080 -b 0.0.0.0` とする  
-4. Railsアプリケーションが特定のホスト名からのリクエストを受け付けるように設定  
-config/environments/development.rbファイルに追記  
+`socket: /var/lib/mysql/mysql.sock`(developmentおよびtest) 
+4. bin/cloud_devの権限を変更
+    - コマンド  
+  `sudo chmod 700 bin/cloud_dev`
+5. Railsアプリケーションが特定のホスト名からのリクエストを受け付けるように設定  
+6. config/environments/development.rbファイルに「`config.hosts << ~`」を追記  
+
+```
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Uncomment if you wish to allow Action Cable access from any origin.
+  # config.action_cable.disable_request_forgery_protection = true
+  
+  config.hosts << "45193b51e91841f9a99d2648bbdb4ca0.vfs.cloud9.ap-northeast-1.amazonaws.com"
+  
+end
+```  
 
 ![host](images/host.png)
 

@@ -84,6 +84,7 @@ GitHub 側にて ダミーのメールアドレス(noreply アドレス) が用�
 3.「Keep my email address private」を ON にする
 4.表示されたID+USERNAME@users.noreply.github.comのような形式のダミーアドレスを「user.email」に登録する
 ```  
+
 ### SSHキーを使ってGithubと連携する
 GitHub(リモートリポジトリ)とローカルを連携させるためにSSHキーを使って連携させる。  
 手順は以下の通り    
