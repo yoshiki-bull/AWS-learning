@@ -8,12 +8,12 @@
 ## 通信
 クライアント-サーバ間のリクエストとレスポンスのやり取りのこと  
 
-- 通信フォーマット 
+- 通信フォーマット  
 =>「どういった内容」を「どのような形」で「どのようにして送るか」を決めるためのもの 
   - JSON  
   - XML  
 
-同じ情報(キーと値の組み合わせ)を表現
+※ 同じ情報(キーと値の組み合わせ)を表現
 ```
 // JSON形式
 {
@@ -139,6 +139,9 @@ RDBを管理する為のシステム。
 プロジェクトの依存関係を解決し必要なパッケージをインストールする  
 5. Railsをインストール  
 `gem install rails <version>`
+
+### Cloud9上でMySQLセットアップ
+- 参考 => [ハンズオン](https://github.com/MasatoshiMizumoto/raisetech_documents/blob/main/aws/docs/install_mysql_on_cloud9_amazon_linux_2.md)
 
 ### 設定の修正  
 1. サンプルのDB設定ファイルを元に実際の設定ファイルを作成  
